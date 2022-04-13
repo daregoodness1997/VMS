@@ -23,6 +23,7 @@ import {
 // import schema
 
 import { SignUpSchema } from '../../helpers/schema';
+import { Link as NavLink } from 'react-router-dom';
 
 const SignUp = () => {
   return (
@@ -171,6 +172,14 @@ const SignUp = () => {
             )}
           </Formik>
         </Box>
+        <Stack align={'center'}>
+          <Text fontSize={'lg'} color={'gray.600'}>
+            Already have an account?{' '}
+            <NavLink color={'blue.400'} to='/'>
+              Sign in
+            </NavLink>
+          </Text>
+        </Stack>
       </Stack>
     </Flex>
   );
