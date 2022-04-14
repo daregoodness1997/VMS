@@ -1,9 +1,6 @@
 import React from 'react';
-
 // import Formik and Field
 import { Formik, Field } from 'formik';
-// import yup
-import * as Yup from 'yup';
 import {
   Box,
   Button,
@@ -23,6 +20,7 @@ import {
 // import schema
 
 import { SignUpSchema } from '../../helpers/schema';
+import { Link as NavLink } from 'react-router-dom';
 
 const SignUp = () => {
   return (
@@ -171,6 +169,14 @@ const SignUp = () => {
             )}
           </Formik>
         </Box>
+        <Stack align={'center'}>
+          <Text fontSize={'lg'} color={'gray.600'}>
+            Already have an account?{' '}
+            <NavLink color={'blue.400'} to='/'>
+              Sign in
+            </NavLink>
+          </Text>
+        </Stack>
       </Stack>
     </Flex>
   );

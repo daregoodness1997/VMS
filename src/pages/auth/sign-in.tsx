@@ -1,9 +1,6 @@
-import React, { useState } from 'react';
-
 // import Formik and Field
 import { Formik, Field } from 'formik';
-// import yup
-import * as Yup from 'yup';
+
 import {
   Box,
   Button,
@@ -30,12 +27,19 @@ import { useSelector, useDispatch } from 'react-redux';
 import { success } from '../../redux/features/authSlice';
 import { RootState } from '../../redux/store/store';
 
+import { Link as NavLink } from 'react-router-dom';
+
+// navigate
+import { useNavigate } from 'react-router-dom';
+
 const SignIn = () => {
   const authentication = useSelector(
     (state: RootState) => state.authentication
   );
 
   const dispatch = useDispatch();
+
+  let navigate = useNavigate();
 
   console.log('Auth', authentication);
   return (
@@ -70,6 +74,7 @@ const SignIn = () => {
             onSubmit={values => {
               alert(JSON.stringify(values, null, 2));
               dispatch(success(values));
+              navigate('/app');
             }}
           >
             {({ handleSubmit, errors, touched }) => (
@@ -138,6 +143,15 @@ const SignIn = () => {
             )}
           </Formik>
         </Box>
+
+        <Stack align={'center'}>
+          <Text fontSize={'lg'} color={'gray.600'}>
+            Don't have an account?{' '}
+            <NavLink color={'blue.400'} to='/signup'>
+              Sign up
+            </NavLink>
+          </Text>
+        </Stack>
       </Stack>
     </Flex>
   );
