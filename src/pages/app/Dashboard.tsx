@@ -41,7 +41,7 @@ const LinkItems: Array<LinkItemProps> = [
   { name: 'Settings', icon: FiSettings },
 ];
 
-export default function Dashboard({ children }: { children: ReactNode }) {
+export default function Dashboard() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
