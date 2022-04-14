@@ -27,7 +27,7 @@ const VisitationRow: React.FC<Props> = ({
   status,
 }) => {
   const textColor = useColorModeValue('gray.700', 'white');
-  const bgStatus = useColorModeValue('gray.400', '#1a202c');
+  const bgStatus = useColorModeValue('gray.300', '#1a202c');
   const colorStatus = useColorModeValue('white', 'gray.400');
   return (
     <Tr>
@@ -52,16 +52,16 @@ const VisitationRow: React.FC<Props> = ({
 
       <Td>
         <Flex direction='column'>
-          <Text fontSize='md' color={textColor} fontWeight='bold'>
+          <Text fontSize='sm' color={textColor} fontWeight='bold'>
             {reason}
           </Text>
         </Flex>
       </Td>
       <Td>
         <Badge
-          bg={status === 'Online' ? 'green.400' : bgStatus}
-          color={status === 'Online' ? 'white' : colorStatus}
-          fontSize='16px'
+          bg={status === 'Attended' ? 'green.300' : bgStatus}
+          color={status === 'Attended' ? 'white' : colorStatus}
+          fontSize='12px'
           p='3px 10px'
           borderRadius='8px'
         >
@@ -69,7 +69,7 @@ const VisitationRow: React.FC<Props> = ({
         </Badge>
       </Td>
       <Td>
-        <Text fontSize='md' color={textColor} fontWeight='bold' pb='.5rem'>
+        <Text fontSize='sm' color={textColor} pb='.5rem'>
           {date}
         </Text>
       </Td>

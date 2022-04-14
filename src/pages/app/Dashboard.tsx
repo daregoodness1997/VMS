@@ -40,8 +40,9 @@ const LinkItems: Array<LinkItemProps> = [
   { name: 'Favourites', icon: FiStar },
   { name: 'Settings', icon: FiSettings },
 ];
+interface Props {}
 
-export default function Dashboard() {
+export const Dashboard: React.FC<Props> = ({ children }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
@@ -66,10 +67,9 @@ export default function Dashboard() {
       {/* mobilenav */}
       <Navbar onOpen={onOpen} />
       <Box ml={{ base: 0, md: 60 }} p='4'>
+        {children}
         <Outlet />
-        <StatGroup />
-        <DataGroup />
       </Box>
     </Box>
   );
-}
+};

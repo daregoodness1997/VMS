@@ -14,7 +14,7 @@ import { Card, CardHeader, VisitationRow } from '../../components';
 // import { textColor } from '../../helpers/constants';
 import { visitorHistoryData } from '../../helpers/data';
 
-const VisitorsHistory = () => {
+const Staffs = () => {
   const textColor = useColorModeValue('gray.700', 'white');
   let visitations = 40;
   return (
@@ -22,27 +22,18 @@ const VisitorsHistory = () => {
       <CardHeader p='12px 0px 28px 0px'>
         <Flex direction='column'>
           <Flex justify='space-between'>
-            <Text fontSize='lg' color={textColor} fontWeight='bold' pb='.5rem'>
-              Visitation History
+            <Text fontSize='xl' color={textColor} fontWeight='bold' pb='.5rem'>
+              Staffs
             </Text>
-            {/* <Button
+            <Button
               variant={'solid'}
               colorScheme={'purple'}
               size={'md'}
               mr={4}
               leftIcon={<AddIcon />}
             >
-              Create Invite
-            </Button> */}
-          </Flex>
-
-          <Flex align='center'>
-            <Text fontSize='sm' color='gray.400' fontWeight='normal'>
-              <Text fontWeight='bold' as='span'>
-                Total of {visitations}{' '}
-              </Text>
-              this month.
-            </Text>
+              Create Staff
+            </Button>
           </Flex>
         </Flex>
       </CardHeader>
@@ -76,4 +67,4 @@ const VisitorsHistory = () => {
   );
 };
 
-export default VisitorsHistory;
+export default Staffs;

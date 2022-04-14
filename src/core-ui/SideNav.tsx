@@ -6,7 +6,11 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 import { IconType } from 'react-icons';
-import { adminLinkItems } from '../helpers/constants';
+import {
+  adminLinkItems,
+  staffLinkItems,
+  visitorLinkItems,
+} from '../helpers/constants';
 import { BoxProps } from '../helpers/interfaces';
 import NavItem from './NavItem';
 
@@ -20,7 +24,13 @@ interface LinkItemProps {
   icon: IconType;
   to: string;
 }
-const LinkItems: Array<LinkItemProps> = adminLinkItems;
+
+const setRoleLinks = (role: string) => {
+  if (role === 'ADMIN') return adminLinkItems;
+  else if (role === 'STAFF') return staffLinkItems;
+  return visitorLinkItems;
+};
+const LinkItems: Array<LinkItemProps> = setRoleLinks(ROLE);
 
 const SideNav: React.FC<Props> = ({ onClose, ...rest }) => {
   return (

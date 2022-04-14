@@ -1,3 +1,4 @@
+import { useColorModeValue } from '@chakra-ui/react';
 import { IconType } from 'react-icons';
 import {
   FiHome,
@@ -95,8 +96,8 @@ interface LinkItemProps {
 const adminLinkItems: Array<LinkItemProps> = [
   { name: 'Overview', icon: FiHome, to: '/app' },
   { name: 'Organization', icon: FiTrendingUp, to: '/app' },
-  { name: 'Departments', icon: FiCompass, to: '/app' },
-  { name: 'Staffs', icon: FiStar, to: '/app' },
+  { name: 'Departments', icon: FiCompass, to: '/app/departments' },
+  { name: 'Staffs', icon: FiStar, to: '/app/staffs' },
   { name: 'Visit Purpose', icon: FiStar, to: '/app' },
   { name: 'Profile', icon: FiStar, to: '/app' },
   { name: 'Admins', icon: FiStar, to: '/app' },
@@ -118,6 +119,8 @@ const visitorLinkItems: Array<LinkItemProps> = [
   { name: 'Preference', icon: '', to: '/app' },
 ];
 
+// const textColor = useColorModeValue('gray.700', 'white');
+
 export {
   colors,
   breakpoints,
@@ -129,4 +132,5 @@ export {
   adminLinkItems,
   staffLinkItems,
   visitorLinkItems,
+  // textColor,
 };
