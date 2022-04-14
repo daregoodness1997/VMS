@@ -12,7 +12,7 @@ interface Props extends FlexProps {
 }
 
 const NavItem: React.FC<Props> = ({ icon, children, to, onClick, ...rest }) => {
-  const textColor = useColorModeValue('gray.700', 'white');
+  const textColor = useColorModeValue('gray.600', 'white');
   const hovertextColor = useColorModeValue('white', 'gray.100');
 
   return (
@@ -52,7 +52,9 @@ const NavItem: React.FC<Props> = ({ icon, children, to, onClick, ...rest }) => {
               color={textColor}
               fontWeight='bold'
               pb='.1rem'
-              _hover={{ color: hovertextColor }}
+              _groupHover={{
+                color: hovertextColor,
+              }}
             >
               {children}
             </Text>

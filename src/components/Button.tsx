@@ -2,7 +2,7 @@ import React from 'react';
 import { Button as ChakraButton } from '@chakra-ui/react';
 
 interface Props {
-  onClick: (event: MouseEvent) => void;
+  onClick: () => void;
 }
 
 const Button: React.FC<Props> = ({ children, onClick, ...props }) => {
