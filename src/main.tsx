@@ -14,13 +14,13 @@ import { store } from './redux/store/store';
 
 // import BrowserRouter from react-router-dom
 import { BrowserRouter } from 'react-router-dom';
-import AppRoutes from './routes';
+import App from './App';
 
 ReactDOM.render(
   <Provider store={store}>
     <ChakraProvider theme={theme}>
       <BrowserRouter>
-        <AppRoutes />
+        <App />
       </BrowserRouter>
     </ChakraProvider>
   </Provider>,

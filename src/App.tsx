@@ -1,19 +1,9 @@
 import './App.css';
-import { Navbar } from './components';
 
-// import useColorMode from chakra-ui
-
-import SignIn from './pages/auth/sign-in';
-import SignUp from './pages/auth/sign-up';
+import AppRoutes from './routes';
 
 function App() {
-  return (
-    <div className='App'>
-      {/* <Navbar /> */}
-      <SignIn />
-      {/* <SignUp /> */}
-    </div>
-  );
+  return <AppRoutes />;
 }
 
 export default App;

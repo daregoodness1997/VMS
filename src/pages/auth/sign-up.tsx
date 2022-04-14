@@ -1,9 +1,6 @@
 import React from 'react';
-
 // import Formik and Field
 import { Formik, Field } from 'formik';
-// import yup
-import * as Yup from 'yup';
 import {
   Box,
   Button,

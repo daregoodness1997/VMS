@@ -1,3 +1,15 @@
+import { IconType } from 'react-icons';
+import {
+  FiHome,
+  FiTrendingUp,
+  FiCompass,
+  FiStar,
+  FiSettings,
+  FiMenu,
+  FiBell,
+  FiChevronDown,
+} from 'react-icons/fi';
+
 const colors = {
   brand: {
     900: '#1a365d',
@@ -74,6 +86,38 @@ const letterSpacings = {
   widest: '0.1em',
 };
 
+interface LinkItemProps {
+  name: string;
+  icon: IconType | any;
+  to: string;
+}
+
+const adminLinkItems: Array<LinkItemProps> = [
+  { name: 'Overview', icon: FiHome, to: '/app' },
+  { name: 'Organization', icon: FiTrendingUp, to: '/app' },
+  { name: 'Departments', icon: FiCompass, to: '/app' },
+  { name: 'Staffs', icon: FiStar, to: '/app' },
+  { name: 'Visit Purpose', icon: FiStar, to: '/app' },
+  { name: 'Profile', icon: FiStar, to: '/app' },
+  { name: 'Admins', icon: FiStar, to: '/app' },
+  { name: 'VMS', icon: FiStar, to: '/app' },
+  { name: 'Preference', icon: FiSettings, to: '/app' },
+];
+const staffLinkItems: Array<LinkItemProps> = [
+  { name: 'Overview', icon: '', to: '/app' },
+  { name: 'Visitors Logbook', icon: '', to: '/app' },
+  { name: 'Invitations', icon: '', to: '/app' },
+  { name: 'Profile', icon: '', to: '/app' },
+  { name: 'VMS', icon: '', to: '/app' },
+  { name: 'Preference', icon: '', to: '/app' },
+];
+const visitorLinkItems: Array<LinkItemProps> = [
+  { name: 'Overview', icon: '', to: '/app' },
+  { name: 'History', icon: '', to: '/app' },
+  { name: 'Profile', icon: '', to: '/app' },
+  { name: 'Preference', icon: '', to: '/app' },
+];
+
 export {
   colors,
   breakpoints,
@@ -82,4 +126,7 @@ export {
   fontWeights,
   lineHeights,
   letterSpacings,
+  adminLinkItems,
+  staffLinkItems,
+  visitorLinkItems,
 };
