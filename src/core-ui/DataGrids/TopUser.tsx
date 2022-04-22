@@ -8,7 +8,7 @@ const TopUser = () => {
   const textColor = useColorModeValue('gray.700', 'white');
 
   return (
-    <Card>
+    <Card h={96}>
       <CardHeader p='22px 0px 0px 14px'>
         <Flex direction='column'>
           <Text fontSize='lg' color={textColor} fontWeight='bold' pb='.5rem'>
@@ -16,15 +16,16 @@ const TopUser = () => {
           </Text>
         </Flex>
       </CardHeader>
-      <CardBody ps='20px' pe='0px' mb='31px' position='relative'>
+      <CardBody p={4} mb='31px' position='relative' h={'80%'} overflowY='auto'>
         <Flex direction='column'>
-          {topUserData.map((row, index, arr) => {
+          {topUserData.map((row, index) => {
             return (
               <UserRow
                 logo={row.logo}
                 name={row.name}
                 email={row.email}
                 number={row.number}
+                key={index}
               />
             );
           })}

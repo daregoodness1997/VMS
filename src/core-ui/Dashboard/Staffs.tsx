@@ -11,8 +11,9 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 import { Card, CardHeader, VisitationRow } from '../../components';
+import { StaffRow } from '../../components/Tables';
 // import { textColor } from '../../helpers/constants';
-import { visitorHistoryData } from '../../helpers/data';
+import { staffsData } from '../../helpers/data';
 
 const Staffs = () => {
   const textColor = useColorModeValue('gray.700', 'white');
@@ -41,25 +42,21 @@ const Staffs = () => {
         <Thead>
           <Tr my='.8rem' ps='0px'>
             <Th ps='0px' color='gray.400'>
-              Details
+              ID
             </Th>
-            <Th color='gray.400'>Reason</Th>
-            <Th color='gray.400'>Date</Th>
+            <Th color='gray.400'>Full Name</Th>
+            <Th color='gray.400'>Email</Th>
+            <Th color='gray.400'>Department</Th>
+            <Th color='gray.400'>Mobile Number</Th>
+            <Th color='gray.400'>Date of Birth</Th>
             <Th color='gray.400'>Status</Th>
+            <Th color='gray.400'>Role</Th>
+            <Th color='gray.400'>Actions</Th>
           </Tr>
         </Thead>
         <Tbody>
-          {visitorHistoryData.map(row => {
-            return (
-              <VisitationRow
-                name={row.name}
-                logo={row.logo}
-                email={row.email}
-                date={row.date}
-                reason={row.reason}
-                status={row.status}
-              />
-            );
+          {staffsData.map(row => {
+            return <StaffRow {...row} key={row.id} />;
           })}
         </Tbody>
       </Table>

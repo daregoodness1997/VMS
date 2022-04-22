@@ -137,4 +137,76 @@ const topUserData: Array<TopUserProps> = [
   },
 ];
 
-export { overviewData, visitorHistoryData, topUserData };
+interface DepartmentProps {
+  id: any;
+  name: string;
+  status: string;
+}
+
+const departmentData: Array<DepartmentProps> = [
+  { id: 1, name: 'Admin', status: 'Active' },
+  { id: 2, name: 'Frontdesk', status: 'Inactive' },
+  { id: 3, name: 'Accounting', status: 'Active' },
+];
+
+interface StaffsProps {
+  id: any;
+  fullname: string;
+  email: string;
+  department: string;
+  mobileno: string;
+  dob: string;
+  status: string;
+  role: string;
+}
+
+const staffsData: Array<StaffsProps> = [
+  {
+    id: 1,
+    fullname: 'Adekunle Ajayi',
+    email: 'adekunleajyi@mail.com',
+    department: 'Admin',
+    mobileno: '23478984563',
+    dob: '23/09/1956',
+    status: 'Active',
+    role: 'STAFF',
+  },
+  {
+    id: 1,
+    fullname: 'Adekunle Ajayi',
+    email: 'adekunleajyi@mail.com',
+    department: 'Admin',
+    mobileno: '23478984563',
+    dob: '23/09/1956',
+    status: 'Active',
+    role: 'STAFF',
+  },
+  {
+    id: 1,
+    fullname: 'Adekunle Ajayi',
+    email: 'adekunleajyi@mail.com',
+    department: 'Admin',
+    mobileno: '23478984563',
+    dob: '23/09/1956',
+    status: 'Active',
+    role: 'STAFF',
+  },
+  {
+    id: 1,
+    fullname: 'Adekunle Ajayi',
+    email: 'adekunleajyi@mail.com',
+    department: 'Admin',
+    mobileno: '23478984563',
+    dob: '23/09/1956',
+    status: 'Active',
+    role: 'ADMIN',
+  },
+];
+
+export {
+  overviewData,
+  visitorHistoryData,
+  topUserData,
+  departmentData,
+  staffsData,
+};

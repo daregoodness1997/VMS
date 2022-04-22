@@ -1,4 +1,6 @@
 import { Box, useStyleConfig } from '@chakra-ui/react';
+
+
 interface Props {
   variant?: string;
   p?: string;

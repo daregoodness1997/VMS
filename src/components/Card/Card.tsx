@@ -5,6 +5,7 @@ interface Props {
   maxH?: any;
   overflowX?: any;
   p?: any;
+  h?: any;
 }
 
 const Card: React.FC<Props> = ({
@@ -12,6 +13,7 @@ const Card: React.FC<Props> = ({
   children,
   minH,
   maxH,
+  h,
   overflowX,
   p = 4,
   ...rest
@@ -21,6 +23,7 @@ const Card: React.FC<Props> = ({
       bg={useColorModeValue('gray.50', 'gray.900')}
       borderRadius={4}
       minH={minH}
+      h={h}
       maxH={maxH}
       w={'full'}
       p={p}

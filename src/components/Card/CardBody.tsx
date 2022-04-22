@@ -4,7 +4,10 @@ interface Props {
   ps?: any;
   pe?: any;
   mb?: any;
+  p?: any;
   position?: any;
+  overflowY?: any;
+  h?: any;
 }
 
 const CardBody: React.FC<Props> = ({
@@ -13,13 +16,26 @@ const CardBody: React.FC<Props> = ({
   ps,
   pe,
   mb,
+  p,
   position,
+  overflowY,
+  h,
   ...rest
 }) => {
   const styles = useStyleConfig('CardBody', { variant });
   // Pass the computed styles into the `__css` prop
   return (
-    <Box __css={styles} ps={ps} pe={pe} mb={mb} position={position} {...rest}>
+    <Box
+      __css={styles}
+      ps={ps}
+      pe={pe}
+      p={p}
+      mb={mb}
+      position={position}
+      overflowY={overflowY}
+      h={h}
+      {...rest}
+    >
       {children}
     </Box>
   );

@@ -98,7 +98,7 @@ const adminLinkItems: Array<LinkItemProps> = [
   { name: 'Organization', icon: FiTrendingUp, to: '/app' },
   { name: 'Departments', icon: FiCompass, to: '/app/departments' },
   { name: 'Staffs', icon: FiStar, to: '/app/staffs' },
-  { name: 'Visit Purpose', icon: FiStar, to: '/app' },
+  { name: 'Visit Purpose', icon: FiStar, to: '/app/visitpurpose' },
   { name: 'Profile', icon: FiStar, to: '/app' },
   { name: 'Admins', icon: FiStar, to: '/app' },
   { name: 'VMS', icon: FiStar, to: '/app' },

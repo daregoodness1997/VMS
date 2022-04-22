@@ -1,12 +1,4 @@
-import {
-  Avatar,
-  Box,
-  Button,
-  Flex,
-  Icon,
-  Text,
-  useColorModeValue,
-} from '@chakra-ui/react';
+import { Avatar, Box, Flex, useColorModeValue, Text } from '@chakra-ui/react';
 
 interface Props {
   name: string;
